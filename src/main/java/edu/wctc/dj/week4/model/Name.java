@@ -13,11 +13,21 @@ public class Name {
     private String id;
     private String first;
     private String last;
+    private Address address;
 
-    public Name(String id, String first, String last) {
+    public Name(String id, String first, String last, Address address) {
         this.id = id;
         this.first = first;
         this.last = last;
+        this.address = address;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getId() {
