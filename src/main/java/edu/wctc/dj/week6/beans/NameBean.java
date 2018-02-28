@@ -5,10 +5,12 @@ package edu.wctc.dj.week6.beans;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import edu.wctc.dj.week6.model.Name;
+import edu.wctc.dj.week6.model.NameService;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  *
@@ -18,10 +20,27 @@ import java.io.Serializable;
 @SessionScoped
 public class NameBean implements Serializable {
 
-    /**
-     * Creates a new instance of NameBean
-     */
+    private final NameService nameService = new NameService();
+    private Name name;
+    private List<Name> nameList;
+
     public NameBean() {
     }
-    
+
+    public Name getName() {
+        return name;
+    }
+
+    public void setName(Name name) {
+        this.name = name;
+    }
+
+    public List<Name> getNameList() {
+        return nameList;
+    }
+
+    public void setNameList(List<Name> nameList) {
+        this.nameList = nameList;
+    }
+
 }
