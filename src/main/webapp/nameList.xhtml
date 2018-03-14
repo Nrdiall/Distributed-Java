@@ -9,8 +9,8 @@
     </h:head>
     <h:body>
         <h:form id="form">
-            <p:outputLabel id="cartQuantity" value="Cart:" />
-            <h:outputText id="cartQuantity" value="#{cartBean.itemsInCart}">
+            <p:outputLabel for="cartQuantity" value="Cart:" />
+            <h:outputText id="cartQuantity" value="#{cartBean.itemsInCart}"/>
             <p:dataTable value="#{nameBean.nameList}" var="name"
                          rowKey="#{name.id}" selection="#{nameBean.name}"
                          selectionMode="single">
