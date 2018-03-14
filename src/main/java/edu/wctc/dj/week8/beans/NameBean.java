@@ -1,12 +1,12 @@
-package edu.wctc.dj.week6.beans;
+package edu.wctc.dj.week8.beans;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import edu.wctc.dj.week6.model.Name;
-import edu.wctc.dj.week6.model.NameService;
+import edu.wctc.dj.week8.model.Name;
+import edu.wctc.dj.week8.model.NameService;
 import java.io.IOException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;

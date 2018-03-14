@@ -8,7 +8,9 @@
         <title>Name List</title>
     </h:head>
     <h:body>
-        <h:form>
+        <h:form id="form">
+            <p:outputLabel id="cartQuantity" value="Cart:" />
+            <h:outputText id="cartQuantity" value="#{cartBean.itemsInCart}">
             <p:dataTable value="#{nameBean.nameList}" var="name"
                          rowKey="#{name.id}" selection="#{nameBean.name}"
                          selectionMode="single">
@@ -18,6 +20,11 @@
                 </p:column>
                 <p:column>
                     <h:outputText value="#{name.last}"/>
+                </p:column>
+                <p:column>
+                    <p:commandButton value="Add" 
+                                     update=":form:cartQuantity" 
+                                     actionListener="#{cartBean.addToCart(name)}"/>
                 </p:column>
             </p:dataTable>
         </h:form>
