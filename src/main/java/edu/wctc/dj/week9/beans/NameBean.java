@@ -1,12 +1,12 @@
-package edu.wctc.dj.week8.beans;
+package edu.wctc.dj.week9.beans;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import edu.wctc.dj.week8.model.Name;
-import edu.wctc.dj.week8.model.NameService;
+import edu.wctc.dj.week9.model.Name;
+import edu.wctc.dj.week9.model.NameService;
 import java.io.IOException;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
@@ -57,7 +57,7 @@ public class NameBean implements Serializable {
         }
     }
     
-    public String allNames(){
+    public String allNames() throws Exception{
         nameList = nameService.getAllNames();
         return "nameList";
     }
