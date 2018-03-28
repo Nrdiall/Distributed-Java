@@ -7,8 +7,6 @@ package edu.wctc.dj.week9.model;
 
 import edu.wctc.dj.week9.data.AddressDAO;
 import edu.wctc.dj.week9.data.NameDAO;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
