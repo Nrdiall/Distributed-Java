@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.wctc.dj.week9.data;
+package edu.wctc.dj.week10.data;
 
-import edu.wctc.dj.week9.model.Name;
+import edu.wctc.dj.week10.model.Name;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

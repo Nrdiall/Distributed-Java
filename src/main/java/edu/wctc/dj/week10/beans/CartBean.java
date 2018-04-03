@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.wctc.dj.week9.beans;
+package edu.wctc.dj.week10.beans;
 
-import edu.wctc.dj.week9.model.Name;
-import edu.wctc.dj.week9.model.ShoppingCart;
-import edu.wctc.dj.week9.model.ShoppingCartService;
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
+import edu.wctc.dj.week10.model.Name;
+import edu.wctc.dj.week10.model.ShoppingCart;
+import edu.wctc.dj.week10.model.ShoppingCartService;
 import java.io.Serializable;
 import javax.faces.context.FacesContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author L117student
  */
-@Named(value = "cartBean")
-@SessionScoped
+@Component(value = "cartBean")
+@Scope("session")
 public class CartBean implements Serializable {
     private final String sessionId;
     private final ShoppingCart cart;
