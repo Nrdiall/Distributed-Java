@@ -1,18 +1,19 @@
-package edu.wctc.dj.week10.beans;
+package edu.wctc.dj.week10.namesapp10.beans;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import edu.wctc.dj.week10.model.Name;
-import edu.wctc.dj.week10.model.NameService;
+import edu.wctc.dj.week10.namesapp10.model.Name;
+import edu.wctc.dj.week10.namesapp10.service.NameService;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +25,8 @@ import org.springframework.stereotype.Component;
 @Scope("session")
 public class NameBean implements Serializable {
 
-    private final NameService nameService = new NameService();
+    @Autowired
+    private NameService nameService;
     private Name name;
     private List<Name> nameList;
 

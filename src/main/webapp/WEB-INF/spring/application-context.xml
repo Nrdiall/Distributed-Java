@@ -9,6 +9,6 @@
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
 ">
 
-	<context:component-scan base-package="edu.wctc.dj.week10" />
+	<context:component-scan base-package="edu.wctc.dj.week10.namesapp10" />
 
 </beans>
