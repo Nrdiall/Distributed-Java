@@ -29,7 +29,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "edu.wctc.dj.week10.namesapp10")
 public class PersistenceJNDIConfig {
-    @Bean
+    
+	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory()
 		throws NamingException {
 		LocalContainerEntityManagerFactoryBean emf
@@ -54,8 +55,7 @@ public class PersistenceJNDIConfig {
 
 	@Bean
 	public DataSource dataSource() throws NamingException {
-		return (DataSource) new JndiTemplate()
-			.lookup("java:comp/env/jdbc/myNames");
+		return (DataSource) new JndiTemplate().lookup("java:comp/env/jdbc/myNames");
 	}
 
 	@Bean
